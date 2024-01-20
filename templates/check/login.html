@@ -1,0 +1,21 @@
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<h3 class="text-center">Witam w aplikacji</h3>
+<h5 class="text-center">O dane do logowanie proszę zapytać administratora</h5>
+<div class="container">
+    <form for="" method="POST">
+        <label for="username" class="form-label">Nazwa użytkownika</label>
+        <input type="text" class="form-control" name="username" id="username" placeholder=""/><br>
+        <label for="mail" class="form-label">Email</label>
+        <input type="email" class="form-control" name="mail" id="mail" placeholder="abc@mail.com"/><br>
+        <label for="passwd" class="form-label">Hasło</label>
+        <input type="password" class="form-control" name="passwd" id="passwd" placeholder="***"/><br>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary ml-3">Zaloguj</button>
+        </div>
+        
+        
+        </div>
+    </form>
+</div>
