@@ -1,0 +1,10 @@
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<div class="container">
+    {% csrf_token %}
+    <h1>Witam na stronie</h1>
+    <div class="container-fluid">
+        <a href="{% url 'login' %}" class="btn btn-primary mx-0">Logowanie</a>
+    </div>    
+</div>
