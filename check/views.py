@@ -1,10 +1,10 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
-from .tasks import myTask
+from .tasks import add
 from django_celery_beat.models import PeriodicTask, IntervalSchedule
 
 def schedulePage(request):
-    myTask.delay()
+    add.delay()
     return HttpResponse("TASK COMPLETE")
 
 
