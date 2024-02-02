@@ -6,6 +6,7 @@ from celery import Celery
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'monit.settings')
 
 app = Celery('monit')
+app.conf.enable_utc=False
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
@@ -14,6 +15,10 @@ app = Celery('monit')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
 # Load task modules from all registered Django apps.
+app.conf.beat_schedule = {
+    
+}
+
 app.autodiscover_tasks()
 
 

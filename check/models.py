@@ -4,8 +4,12 @@ from django.contrib.auth.models import User
     
 class Sites(models.Model):
     link = models.CharField(max_length=200)
-    userId = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_owner = models.ForeignKey(User, on_delete=models.CASCADE)
     status = models.CharField(max_length=3, editable=False, default="400")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    class Meta:
+        verbose_name_plural = 'Sites'
     @admin.display(
         boolean= False,
         ordering='userId',
