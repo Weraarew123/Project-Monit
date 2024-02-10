@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'check',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'django_celery_beat',
     'django_celery_results',
     'django.contrib.admin',
@@ -142,3 +144,5 @@ CELERY_RESULT_SERIALIZER='json'
 CELERY_ACCEPT_CONTENT = ['json']
 
 CELERY_BEAT_SCHEDULER='django_celery_beat.schedulers:DatabaseScheduler'
+
+CRISPY_TEMPLATE_PACK = 'Bootstrap5'
